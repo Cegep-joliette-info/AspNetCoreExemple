@@ -10,13 +10,15 @@ namespace ExempleAspNetCore.Models.AccountViewModels
     {
         [Required]
         [EmailAddress]
+        [Display(Name = "Courriel")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
+        [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Se souvenir de moi?")]
         public bool RememberMe { get; set; }
     }
 }

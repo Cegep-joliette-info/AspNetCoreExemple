@@ -1,0 +1,12 @@
+[submodule "ExempleAspNetCore/wwwroot/lib/AdminLTE"]
+	path = ExempleAspNetCore/wwwroot/lib/AdminLTE
+	url = git@github.com:almasaeed2010/AdminLTE.git
+[submodule "ExempleAspNetCore/wwwroot/lib/bootstrap"]
+	path = ExempleAspNetCore/wwwroot/lib/bootstrap
+	url = git@github.com:twbs/bootstrap.git
+[submodule "ExempleAspNetCore/wwwroot/lib/Font-Awesome"]
+	path = ExempleAspNetCore/wwwroot/lib/Font-Awesome
+	url = git@github.com:FortAwesome/Font-Awesome.git
+[submodule "ExempleAspNetCore/wwwroot/lib/bootstrap4"]
+	path = ExempleAspNetCore/wwwroot/lib/bootstrap4
+	url = git@github.com:twbs/bootstrap.git

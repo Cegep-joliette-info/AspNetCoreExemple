@@ -65,7 +65,14 @@ namespace ExempleAspNetCore.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    if (returnUrl != null)
+                    {
+                        return RedirectToLocal(returnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Backend");
+                    }
                 }
                 if (result.RequiresTwoFactor)
                 {

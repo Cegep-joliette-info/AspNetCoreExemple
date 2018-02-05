@@ -1,106 +1,252 @@
 ﻿@{
+    Layout = "_LayoutFrontend";
     ViewData["Title"] = "Home Page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+@section headimage
+    {
+    <!-- Home -->
+    <div id="home" class="hero-area">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+        <!-- Backgound Image -->
+        <div class="bg-image bg-parallax overlay" style="background-image:url(@Url.Content("~/lib/edusite/edusite/img/home-background.jpg"))"></div>
+        <!-- /Backgound Image -->
+
+        <div class="home-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="white-text">Les cours Edusite</h1>
+                        <p class="lead white-text">Centre de formation cheap.</p>
+                        <a class="main-button icon-button" href="#">Être déçu!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+    <!-- /Home -->
+}
+
+<!-- About -->
+<div id="about" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="section-header">
+                    <h2>Bienvenue sur Edusite</h2>
+                    <p class="lead">Le site parfait pour rien apprendre.</p>
+                </div>
+
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-flask"></i>
+                    <div class="feature-content">
+                        <h4>Cours en ligne</h4>
+                        <p>Des cours très difficiles qui ne vous servirons à rien.</p>
+                    </div>
+                </div>
+                <!-- /feature -->
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-users"></i>
+                    <div class="feature-content">
+                        <h4>Enseignants mémorables</h4>
+                        <p>Ils sont saouls, violent, indisponibles et parlent seulement en klingon.</p>
+                    </div>
+                </div>
+                <!-- /feature -->
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-comments"></i>
+                    <div class="feature-content">
+                        <h4>Communauté</h4>
+                        <p>Une communauté pire que celle de League of Legends.</p>
+                    </div>
+                </div>
+                <!-- /feature -->
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="about-img">
+                    <img src="~/lib/edusite/edusite/img/about.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- row -->
+
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
+    <!-- container -->
 </div>
+<!-- /About -->
+<!-- Courses -->
+<div id="courses" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+            <div class="section-header text-center">
+                <h2>Explore Courses</h2>
+                <p class="lead">Libris vivendo eloquentiam ex ius, nec id splendide abhorreant.</p>
+            </div>
+        </div>
+        <!-- /row -->
+        <!-- courses -->
+        <div id="courses-wrapper">
+
+            <!-- row -->
+            <div class="row">
+
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course01.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">Beginner to Pro in Excel: Financial Modeling and Valuation</a>
+                        <div class="course-details">
+                            <span class="course-category">Business</span>
+                            <span class="course-price course-free">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course02.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">Introduction to CSS </a>
+                        <div class="course-details">
+                            <span class="course-category">Web Design</span>
+                            <span class="course-price course-premium">Premium</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course03.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">The Ultimate Drawing Course | From Beginner To Advanced</a>
+                        <div class="course-details">
+                            <span class="course-category">Drawing</span>
+                            <span class="course-price course-premium">Premium</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course04.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">The Complete Web Development Course</a>
+                        <div class="course-details">
+                            <span class="course-category">Web Development</span>
+                            <span class="course-price course-free">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+
+            </div>
+            <!-- /row -->
+            <!-- row -->
+            <div class="row">
+
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course05.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">PHP Tips, Tricks, and Techniques</a>
+                        <div class="course-details">
+                            <span class="course-category">Web Development</span>
+                            <span class="course-price course-free">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course06.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">All You Need To Know About Web Design</a>
+                        <div class="course-details">
+                            <span class="course-category">Web Design</span>
+                            <span class="course-price course-free">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course07.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">How to Get Started in Photography</a>
+                        <div class="course-details">
+                            <span class="course-category">Photography</span>
+                            <span class="course-price course-free">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+                <!-- single course -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="course">
+                        <a href="#" class="course-img">
+                            <img src="./img/course08.jpg" alt="">
+                            <i class="course-link-icon fa fa-link"></i>
+                        </a>
+                        <a class="course-title" href="#">Typography From A to Z</a>
+                        <div class="course-details">
+                            <span class="course-category">Typography</span>
+                            <span class="course-price course-free">Free</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /single course -->
+
+            </div>
+            <!-- /row -->
+
+        </div>
+        <!-- /courses -->
+
+        <div class="row">
+            <div class="center-btn">
+                <a class="main-button icon-button" href="#">More Courses</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- container -->
+
+</div>
+<!-- /Courses -->

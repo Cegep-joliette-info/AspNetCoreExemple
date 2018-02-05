@@ -5,11 +5,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ExempleAspNetCore.Models;
+using ExempleAspNetCore.Data;
 
 namespace ExempleAspNetCore.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext context;
+
+        public HomeController(ApplicationDbContext _context)
+        {
+            context = _context;
+        }
+
         public IActionResult Index()
         {
             return View();

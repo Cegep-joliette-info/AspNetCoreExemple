@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProgrammIndex>
+
+@{
+    ViewData["Title"] = "Liste des programmes";
+}
+
+@section TitleSection
+{
+    <a asp-action="Create">
+        <i class="fa fa-plus-circle"></i>
+        <span class="sr-only">Créer un nouveau programme</span>
+    </a>
+}
+
+<div class="list-group">
+    @foreach (ProgrammIndex Programm in Model)
+    {
+        <a asp-action="Edit" class="list-group-item" asp-route-id="@Programm.Id">
+            @Programm.Code - @Programm.Name
+            <span class="badge">
+                @Programm.ClassCount
+                <span class="sr-only">cours</span>
+            </span>
+        </a>
+    }
+</div>
