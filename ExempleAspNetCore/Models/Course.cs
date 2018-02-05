@@ -12,6 +12,7 @@ namespace ExempleAspNetCore.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        public Picture Picture { get; set; }
         public Programm Program { get; set; }
     }
 }
