@@ -1,5 +1,6 @@
 ﻿using ExempleAspNetCore.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace ExempleAspNetCore.Data
     {
         public static void Initialize(ApplicationDbContext context, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
+            context.Database.Migrate();
+
             _Initialize(context, userManager, roleManager).Wait();
         }
 

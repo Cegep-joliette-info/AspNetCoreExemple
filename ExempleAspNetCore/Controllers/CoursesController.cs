@@ -180,6 +180,13 @@ namespace ExempleAspNetCore.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult Image(int id)
+        {
+            Course course = _context.Courses.Include("Picture").First(x => x.Id == id);
+            byte[] img = course.Picture.Image;
+            return View(new CourseImage { Image = "data:image/png;base64," + Convert.ToBase64String(img) });
+        }
+
         private bool CourseExists(int id)
         {
             return _context.Courses.Any(e => e.Id == id);

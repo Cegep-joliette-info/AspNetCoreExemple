@@ -11,4 +11,9 @@ namespace ExempleAspNetCore.ViewModels
         
         public IFormFile Picture { get; set; }
     }
+
+    public class CourseImage
+    {
+        public string Image { get; set; }
+    }
 }
