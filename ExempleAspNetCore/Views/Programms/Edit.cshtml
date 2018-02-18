@@ -1,4 +1,5 @@
 ﻿@model ProgrammEdit
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
 
 @{
     ViewData["Title"] = "Modification d'un programme";
@@ -23,7 +24,7 @@
                         <span asp-validation-for="Code" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Name" class="control-label"></label>
+                        <label asp-for="Name" class="control-label">@SharedLocalizer["NAME"]</label>
                         <input asp-for="Name" class="form-control" />
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
@@ -62,7 +63,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                
+
             </div>
             <!-- /.box-body -->
         </div>

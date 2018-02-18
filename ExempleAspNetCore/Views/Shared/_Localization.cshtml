@@ -1,0 +1,17 @@
+﻿@using System.Globalization
+
+@{
+    string ReturnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+@if ("en-CA" != CultureInfo.CurrentUICulture.Name)
+{
+    <text>|</text>
+    <a href="@Url.Action("Local", "Home", new { ReturnUrl = ReturnUrl, Local = "en-CA" })">English</a>
+}
+
+@if ("fr-CA" != CultureInfo.CurrentUICulture.Name)
+{
+    <text>|</text>
+    <a href="@Url.Action("Local", "Home", new { ReturnUrl = ReturnUrl, Local = "fr-CA" })">Français</a>
+}

@@ -65,6 +65,7 @@
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li><a asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> Retour au site</a></li>
+                    <li>@Html.Partial("_Localization")</li>
                     @if (User.IsInRole("Admin"))
                     {
                     <li class="header">Administration</li>

@@ -2,6 +2,7 @@
     Layout = "_LayoutFrontend";
     ViewData["Title"] = "Home Page";
 }
+@inject IHtmlLocalizer<SharedResources> SharedLocalizer
 
 @section headimage
     {
@@ -16,7 +17,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h1 class="white-text">Les cours Edusite</h1>
+                        <h1 class="white-text">@SharedLocalizer["SITE_TITLE"]</h1>
                         <p class="lead white-text">Centre de formation cheap.</p>
                         <a class="main-button icon-button" href="#">Être déçu!</a>
                     </div>
